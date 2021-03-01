@@ -1,0 +1,71 @@
+
+body{
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    height: 100px;
+    background-color: #000000;
+    color:#FFFFFF;
+    
+}
+
+.header{
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items:center;
+}
+.logo{
+    width:100px;
+}
+.logoimg{
+    width: 80px;
+    height: 80px;
+    background-color: #b28756;
+}
+
+.menu{
+    /* colocando a largura da logo fixa e o menu como flex 1 garantimos que o menu pegue todo o espaço que sobra*/
+    flex:1;
+    /* teste com 
+    background-color: red; */
+   
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul, 
+.menu li{
+    list-style: none;
+}
+.menu ul{
+    display: flex;
+}
+.menu li a{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 600; /*valor do semibold*/
+    font-size: 14px;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right:5px;
+    height: 100px;
+    /* o display padrão do a é inline. não temos como botar altura a menos que usemos block ou flex, que aceitam altura */
+    display: flex;
+    align-items: center;
+    /* para evitar o texto de "pular" quando passarmos por cima */
+    border-bottom: 5px solid #000000;
+}
+
+.menu .active a,
+.menu li a:hover{
+    border-bottom: 5px solid #b28756;
+}
